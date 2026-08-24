@@ -1,0 +1,38 @@
+# dependencies
+/node_modules
+/public/tailwind/node_modules
+
+# Next.js
+/.next/
+/out/
+
+# production
+/build
+
+# testing
+/coverage
+
+# environment variables
+.env*
+
+# Vercel
+.vercel
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+# Next.js
+.next/
+
+# Dependencies
+node_modules/

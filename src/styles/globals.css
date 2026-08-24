@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+}
+
+:root {
+  --cream: #e9e3d8;
+  --charcoal: #242320;
+}
+
+* {
+
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__next {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: var(--cream);
+  color: var(--charcoal);
+}
+@keyframes heroTextRise {
+  0% {
+    opacity: 0;
+    transform: translateY(55vh);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
