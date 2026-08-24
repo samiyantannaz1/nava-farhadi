@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 export default function AboutIntro() {
   return (
     <section className="px-8 py-24 md:px-16 md:py-32 lg:px-[10vw] lg:py-40">
@@ -8,7 +10,7 @@ export default function AboutIntro() {
         {/* Image */}
         <div className="relative aspect-[4/5] overflow-hidden">
           <Image
-            src="/images/about/nava-about.webp"
+            src={`${basePath}/images/about/nava-about.webp`}
             alt="NAVA FARHADI interior design"
             fill
             className="object-cover"

@@ -1,4 +1,6 @@
-import Image from "next/image";
+
+import Image from 'next/image'
+import { basePath } from '@/utils/basePath'
 
 export default function ArtOfLiving() {
   return (
@@ -8,7 +10,7 @@ export default function ArtOfLiving() {
         {/* Image */}
         <div className="relative aspect-[4/5] overflow-hidden">
           <Image
-            src="/images/about/art-of-living-new.webp"
+            src={`${basePath}/images/about/art-of-living-new.webp`}
             alt="NAVA FARHADI interior design"
             fill
             className="object-cover"
@@ -44,5 +46,6 @@ export default function ArtOfLiving() {
 
       </div>
     </section>
-  );
+  )
 }
+

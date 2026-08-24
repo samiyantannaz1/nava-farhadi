@@ -1,7 +1,6 @@
-
-
 import Image from 'next/image'
 import type { ReactNode } from 'react'
+import { basePath } from '@/utils/basePath'
 
 interface GalleryImage {
   src: string
@@ -121,14 +120,15 @@ export default function ProjectGallery({
             <div className="flex flex-col gap-8">
 
               {/* Image 18 */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={image18.src}
-                alt={image18.alt}
-                width={image18.width}
-                height={image18.height}
-                className="block h-auto w-full"
-              />
+              {image18 && (
+                <img
+                  src={`${basePath}${image18.src}`}
+                  alt={image18.alt}
+                  width={image18.width}
+                  height={image18.height}
+                  className="block h-auto w-full"
+                />
+              )}
 
               <GalleryItem image={image13} />
 
@@ -141,14 +141,15 @@ export default function ProjectGallery({
             <GalleryItem image={image12} />
 
             {/* Image 18 */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={image18.src}
-              alt={image18.alt}
-              width={image18.width}
-              height={image18.height}
-              className="block h-auto w-full"
-            />
+            {image18 && (
+              <img
+                src={`${basePath}${image18.src}`}
+                alt={image18.alt}
+                width={image18.width}
+                height={image18.height}
+                className="block h-auto w-full"
+              />
+            )}
 
             <GalleryItem image={image13} />
 
@@ -239,7 +240,7 @@ function GalleryItem({
   return (
     <div className="w-full overflow-hidden">
       <Image
-        src={image.src}
+        src={`${basePath}${image.src}`}
         alt={image.alt}
         width={image.width}
         height={image.height}

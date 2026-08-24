@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { basePath } from '@/utils/basePath'
 
 interface GalleryImage {
   src: string
@@ -21,7 +22,7 @@ export default function StonefordCottage({
         {images.map((image, index) => {
           const position = index % 4
 
-          {/* تمام عرض */}
+          // تمام عرض
           if (position === 0) {
             return (
               <div
@@ -33,7 +34,7 @@ export default function StonefordCottage({
             )
           }
 
-          {/* شروع سه ستون */}
+          // شروع سه ستون
           if (position === 1) {
             return (
               <div
@@ -67,7 +68,7 @@ function GalleryItem({
   return (
     <div className="w-full overflow-hidden">
       <Image
-        src={image.src}
+        src={`${basePath}${image.src}`}
         alt={image.alt}
         width={image.width}
         height={image.height}

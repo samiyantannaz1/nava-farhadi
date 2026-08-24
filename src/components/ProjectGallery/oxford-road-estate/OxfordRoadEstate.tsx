@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { basePath } from '@/utils/basePath'
 
 interface GalleryImage {
   src: string
@@ -14,10 +15,6 @@ interface OxfordRoadEstateProps {
 export default function OxfordRoadEstate({
   images,
 }: OxfordRoadEstateProps) {
-
-
-
-
   return (
     <section className="px-6 pb-28 pt-24 md:px-10 lg:px-16 lg:pb-40 lg:pt-32">
       <div className="mx-auto w-full max-w-[1400px]">
@@ -103,7 +100,7 @@ export default function OxfordRoadEstate({
           dir="rtl"
           className="mb-10 grid grid-cols-1 gap-8 md:grid-cols-2"
         >
-          <GalleryItem image={images[17]} />آ
+          <GalleryItem image={images[17]} />
           <GalleryItem image={images[18]} />
         </div>
 
@@ -204,7 +201,7 @@ function GalleryItem({
   return (
     <div className="w-full overflow-hidden">
       <Image
-        src={image.src}
+        src={`${basePath}${image.src}`}
         alt={image.alt}
         width={image.width}
         height={image.height}

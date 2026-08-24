@@ -1,4 +1,6 @@
+
 import Image from 'next/image'
+import { basePath } from '@/utils/basePath'
 
 interface GalleryImage {
   src: string
@@ -145,7 +147,7 @@ function GalleryItem({
   return (
     <div className="w-full overflow-hidden">
       <Image
-        src={image.src}
+        src={`${basePath}${image.src}`}
         alt={image.alt}
         width={image.width}
         height={image.height}
@@ -159,3 +161,4 @@ function GalleryItem({
     </div>
   )
 }
+

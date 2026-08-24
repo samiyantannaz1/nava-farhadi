@@ -1,6 +1,8 @@
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { basePath } from '@/utils/basePath'
 
 export default function AboutPreview() {
   return (
@@ -29,7 +31,7 @@ export default function AboutPreview() {
         >
           <div className="overflow-hidden">
             <Image
-              src="/images/about/nava.webp"
+              src={`${basePath}/images/about/nava.webp`}
               alt="Nava Farhadi"
               width={700}
               height={900}
@@ -93,3 +95,4 @@ export default function AboutPreview() {
     </section>
   )
 }
+
