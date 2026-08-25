@@ -3,7 +3,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+
 import { projects } from '@/data/projects'
+import { getImagePath } from '@/utils/getImagePath'
 
 export default function ProjectsList() {
   return (
@@ -58,14 +60,14 @@ export default function ProjectsList() {
 
                   {/* =========================
                       IMAGE
-                  ========================== */}
+                  ========================= */}
 
                   <div className="w-full md:w-[44%]">
 
                     <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#DDD7CC]">
 
                       <Image
-                        src={project.image}
+                        src={getImagePath(project.image)}
                         alt={project.title}
                         fill
                         sizes="(max-width: 768px) 100vw, 44vw"
@@ -78,7 +80,7 @@ export default function ProjectsList() {
                         "
                       />
 
-                      {/* Number */}
+                      {/* Project Number */}
                       <span
                         className="
                           absolute
@@ -99,8 +101,8 @@ export default function ProjectsList() {
                   </div>
 
                   {/* =========================
-                      CONTENT
-                  ========================== */}
+                      PROJECT CONTENT
+                  ========================= */}
 
                   <div
                     className={`
@@ -184,7 +186,7 @@ export default function ProjectsList() {
 
                     {/* =========================
                         VIEW PROJECT
-                    ========================== */}
+                    ========================= */}
 
                     <div
                       className={`
@@ -210,6 +212,7 @@ export default function ProjectsList() {
                         }
                       `}
                     >
+
                       <span>
                         View Project
                       </span>
@@ -226,6 +229,7 @@ export default function ProjectsList() {
                       >
                         ↗
                       </span>
+
                     </div>
 
                   </div>
