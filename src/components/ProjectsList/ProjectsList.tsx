@@ -254,6 +254,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { ArrowUpRight } from 'lucide-react'
 
 import { projects } from '@/data/projects'
 import { getImagePath } from '@/utils/getImagePath'
@@ -376,7 +377,6 @@ export default function ProjectsList() {
                     <div className="md:max-w-[440px]">
 
                       {/* Project Number */}
-
                       <span
                         className="
                           text-[10px]
@@ -389,7 +389,6 @@ export default function ProjectsList() {
                       </span>
 
                       {/* Title */}
-
                       <h2
                         className="
                           mt-5
@@ -408,7 +407,6 @@ export default function ProjectsList() {
                       </h2>
 
                       {/* Location */}
-
                       <p
                         className="
                           mt-5
@@ -422,7 +420,6 @@ export default function ProjectsList() {
                       </p>
 
                       {/* Category */}
-
                       <p
                         className="
                           mt-2
@@ -470,19 +467,17 @@ export default function ProjectsList() {
                         View Project
                       </span>
 
-                      <span
+                      <ArrowUpRight
+                        size={16}
+                        strokeWidth={1.5}
                         className="
                           text-[#292720]
-                          text-sm
-                          leading-none
                           transition-transform
                           duration-300
                           group-hover:-translate-y-1
                           group-hover:translate-x-1
                         "
-                      >
-                        ↗
-                      </span>
+                      />
 
                     </div>
 
@@ -500,4 +495,6 @@ export default function ProjectsList() {
     </section>
   )
 }
+
+
 

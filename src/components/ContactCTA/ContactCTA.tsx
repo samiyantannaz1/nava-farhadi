@@ -136,11 +136,11 @@
 // }
 
 
-
 'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { ArrowUpRight } from 'lucide-react'
 
 export default function ContactCTA() {
   return (
@@ -251,20 +251,18 @@ export default function ContactCTA() {
               Start a Project
             </span>
 
-            <span
+            <ArrowUpRight
+              size={16}
+              strokeWidth={1.5}
               className="
                 ml-4
                 text-[#292720]
-                text-base
-                leading-none
                 transition-transform
                 duration-300
                 group-hover:-translate-y-1
                 group-hover:translate-x-1
               "
-            >
-              ↗
-            </span>
+            />
           </Link>
 
         </motion.div>
@@ -273,4 +271,3 @@ export default function ContactCTA() {
     </section>
   )
 }
-
