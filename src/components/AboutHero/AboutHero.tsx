@@ -1,3 +1,4 @@
+import { basePath } from '@/utils/basePath'
 export default function AboutHero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -11,7 +12,7 @@ export default function AboutHero() {
         playsInline
       >
         <source
-          src="/videos/Nava-About-Hero-new.mp4"
+      src={`${basePath}/videos/Nava-About-Hero-new.mp4`}
           type="video/mp4"
         />
       </video>

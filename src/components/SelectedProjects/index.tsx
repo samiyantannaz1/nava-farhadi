@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 import { projects } from '../../data/projects'
+import { basePath } from '@/utils/basePath'
 
 const SelectedProjects = () => {
   return (
@@ -72,7 +73,7 @@ const SelectedProjects = () => {
                 <div className="relative aspect-3/4 overflow-hidden bg-[#DDD8CE]">
 
                   <Image
-                    src={project.image}
+                    src={`${basePath}${project.image}`}
                     alt={project.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"

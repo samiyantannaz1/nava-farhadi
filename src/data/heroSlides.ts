@@ -16,7 +16,7 @@ export const heroSlides: HeroSlide[] = [
     title: 'Spaces with character.',
     description:
       'Thoughtful interiors shaped around light, material, and timeless design.',
-    image: `${basePath}/images/hero/hero1-new.jpg`,
+    image: `${basePath}/images/hero/hero1-new.webp`,
     mobileImage: `${basePath}/images/hero/hero1-mobile.webp`,
   },
   {

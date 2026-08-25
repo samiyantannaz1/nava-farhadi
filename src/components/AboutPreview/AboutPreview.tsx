@@ -83,7 +83,7 @@ export default function AboutPreview() {
           </p>
 
           <Link
-            href="/about"
+           href={`${basePath}/about`}
             className="mt-10 inline-flex items-center border-b border-[#292720]/60 pb-2 text-[10px] uppercase tracking-[0.2em] transition-opacity duration-300 hover:opacity-50"
           >
             Discover More
